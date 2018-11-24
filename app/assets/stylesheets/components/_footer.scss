@@ -24,3 +24,62 @@
 .footer .fa-heart {
   color: $blue;
 }
+
+
+@media screen and (max-width:420px) {
+  .footer {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+    padding-left: 95px;
+  }
+
+
+}
+
+@media screen and (max-width:375px) {
+  .footer {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+    padding-left: 70px;
+  }
+
+
+}
+
+@media screen and (max-width:360px) {
+  .footer {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+    padding-left: 70px;
+  }
+
+
+}
+
+@media screen and (max-width:320px) {
+  .footer {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+    padding-left: 45px;
+  }
+
+
+}
+
+
