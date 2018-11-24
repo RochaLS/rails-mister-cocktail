@@ -11,9 +11,13 @@
   </div>
       <div class="row">
     <% @cocktails.each do |cocktail| %>
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <div class= "card-overlay">
-          <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%),url('https://images.unsplash.com/photo-1511715112108-9acc6c3ff61f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ad548838c131107dcc0480052d82a3ba&auto=format&fit=crop&w=1950&q=80');">
+            <% if cocktail.photo.url.nil? %>
+            <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-0.3.5&s=168d2e520f42299d9a648e79d8d85d62&auto=format&fit=crop&w=1950&q=80');">
+            <% else  %>
+            <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), url('<%= cocktail.photo %>');">
+              <% end %>
             <div class="cocktail-name">
               <h3><%= cocktail.name %></h3>
             </div>
